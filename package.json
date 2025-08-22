@@ -1,0 +1,21 @@
+{
+  "name": "danthedev22",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^7.1.2"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.0.0",
+    "atropos": "^2.0.2",
+    "bootstrap": "^5.3.7",
+    "typeit": "^8.8.7",
+    "vanilla-infinite-marquee": "^1.0.13"
+  }
+}

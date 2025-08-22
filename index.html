@@ -1,56 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#1c1f26">
     <title>DanTheDev22</title>
-    <link rel="stylesheet" href="css\styles.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
-    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="src/assets/images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="description" content="Portfolio of Daniel Mogoreanu, Java Software Engineer. Featuring projects, skills, and contact form.">
     <meta name="author" content="Daniel Mogoreanu">
+  </head>
+  <body>
+  <!-- Particles.js library -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-</head>
-<body>
-    <!-- Particles.js library -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-    <!--Header-->
-    <header id="Home">
-
+  <header id="Home">
         <div class="hero-wrapper">
             <div id="particles-js"></div>
-
+            <div class="container">
                 <div class="hero-overlay">
                     <div class="hero-section">
-                        <div class="container">
-                            <span class="brand-name">&lt;DanTheDev22/&gt;</span>
-
+                        <div class="head-container">
+                            <div class="atropos my-atropos">
+                                <div class="atropos-scale">
+                                    <div class="atropos-rotate">
+                                        <div class="atropos-inner">
+                                            <span class="brand-name" data-atropos-offset="10">&lt;DanTheDev22/&gt;</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <nav class="navbar">
-                              <ul class="navbar-links">
-                                <li><a href="#Home">Home</a></li>
-                                <li><a href="#About">About</a></li>
-                                <li><a href="#Projects">Projects</a></li>
-                                <li><a href="#Skills">Skills</a></li>
-                                <li><a href="#Contact">Contact</a></li>
-                              </ul>
+                                <ul class="navbar-links">
+                                    <li><a href="#Home">Home</a></li>
+                                    <li><a href="#About">About</a></li>
+                                    <li><a href="#Projects">Projects</a></li>
+                                    <li><a href="#Skills">Skills</a></li>
+                                    <li><a href="#Contact">Contact</a></li>
+                                </ul>
                             </nav>
+
+                            <label
+                                    for="themeToggle"
+                                    class="themeToggle st-sunMoonThemeToggleBtn"
+                                    type="checkbox"
+                            >
+                                <input type="checkbox" id="themeToggle" class="themeToggleInput" />
+                                <svg
+                                        width="18"
+                                        height="18"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                        stroke="none"
+                                >
+                                    <mask id="moon-mask">
+                                        <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                                        <circle cx="11" cy="3" r="8" fill="black"></circle>
+                                    </mask>
+                                    <circle
+                                            class="sunMoon"
+                                            cx="10"
+                                            cy="10"
+                                            r="8"
+                                            mask="url(#moon-mask)"
+                                    ></circle>
+                                    <g>
+                                        <circle class="sunRay sunRay1" cx="18" cy="10" r="1.5"></circle>
+                                        <circle class="sunRay sunRay2" cx="14" cy="16.928" r="1.5"></circle>
+                                        <circle class="sunRay sunRay3" cx="6" cy="16.928" r="1.5"></circle>
+                                        <circle class="sunRay sunRay4" cx="2" cy="10" r="1.5"></circle>
+                                        <circle class="sunRay sunRay5" cx="6" cy="3.1718" r="1.5"></circle>
+                                        <circle class="sunRay sunRay6" cx="14" cy="3.1718" r="1.5"></circle>
+                                    </g>
+                                </svg>
+                            </label>
                         </div>
 
                         <div class="hero-section__info">
                             <div class="hero-section__image">
-                                <img src="images\avatar.png" alt="Daniel Mogoreanu">
+                                <img src="src/assets/images/avatar.png" alt="Daniel Mogoreanu">
                             </div>
 
                             <div class="hero-section__text">
                                 <p>Hello! I'm</p>
-                                <h1><span class="typing-container">Daniel Mogoreanu</span></h1>
-                                <h2>Java Software Engineer</h2>
+                                <h1><span class="">Daniel Mogoreanu</span></h1>
+                                <h2><span id="type-effect"></span></h2>
                                 <div class="hero-buttons">
                                     <a href="#Projects" class="btn">View Projects</a>
                                     <a href="documents\Daniel M.pdf" download class="btn">Download CV</a>
@@ -67,151 +102,138 @@
                         </div>
                     </div>
                 </div>
-                <div class="hero-fade"></div>
             </div>
+            <div class="hero-fade"></div>
         </div>
-    </header>
+  </header>
 
-  <!--About-->
   <section class="about-section" id="About">
-    <h1>&lt;About Me/&gt;</h1>
-    <div class="about-content">
-      <div class="about-text">
-        <p>
-          👋 Hey there! I'm <strong>Daniel Mogoreanu</strong>  — a self-taught <strong>Java Software Engineer</strong>  with a strong passion for technology and a drive to grow into a top specialist.
-        </p>
-        <br>
-        <p>
-        Since childhood, I’ve been fascinated by how things work, always exploring tech and solving problems on my own. That curiosity turned into a serious commitment to backend development with Java and Spring Boot.
-        </p>
-        <br>
-      </div>
+      <h1>&lt;About Me/&gt;</h1>
+      <div class="about-content">
+          <div class="about-text">
+              <p>
+                  👋 Hey there! I'm <strong>Daniel Mogoreanu</strong>  — a self-taught <strong>Java Software Engineer</strong>  with a strong passion for technology and a drive to grow into a top specialist.
+              </p>
+              <br>
+              <p>
+                  Since childhood, I’ve been fascinated by how things work, always exploring tech and solving problems on my own. That curiosity turned into a serious commitment to backend development with Java and Spring Boot.
+              </p>
+              <br>
+          </div>
 
-      <div class="about-image">
-        <img src="images/about-photo.png" alt="Daniel Mogoreanu Portrait">
+          <div class="about-image">
+              <img src="src/assets/images/about-photo.png" alt="Daniel Mogoreanu Portrait">
+          </div>
       </div>
-    </div>
   </section>
-  
-    <!-- Projects Section -->
-    <section id="Projects" class="projects-section">
-        <div class="container">
-            <h1>&lt;Projects/&gt;</h1>
 
-            <div class="projects-container">
+  <!--Skills-->
+  <section class="skills-section" id="Skills">
+      <h1>&lt;Skills/&gt;</h1>
+      <p>Technologies I use to build robust applications.</p>
 
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>TradeBot – Financial Assistant</h3>
-                        <p class="project-description">Java-based Telegram bot providing real-time market data and tools — directly in Telegram.</p>
-                        
-                        <div class="project-links">
-                            <a href="https://github.com/DanTheDev22/TradeBot" class="btn-github" target="_blank">GitHub</a>
-                            <a href="https://t.me/my_trading_assist_bot" class="btn-demo" target="_blank">Live Demo</a>
-                            <button class="btn-preview" data-video="videos\tradebot-demo.mp4">▶ Preview</button>
-                        </div>
-                    </div>
-                </div>
+      <div class="marquee-container row-1">
+          <div class="horizontal-marquee smooth">
+              <div class="horizontal-marquee-inner">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" width="60px" />
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="60px" />
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" width="60px" />
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" width="60px" />
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg" width="60px" />
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" width="60px" />
+              </div>
+          </div>
+      </div>
 
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Sigment</h3>
-                        <p class="project-description">An anonymous, end-to-end encrypted chat app accessible only via Tor, built with Spring Boot and JavaScript for maximum privacy and zero metadata exposure.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/DanTheDev22/Sigment-Chat" class="btn-github" target="_blank">GitHub</a>
-                            <a href="" class="btn-demo" target="_blank">In Development</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>    
-    </section>
+      <div class="marquee-container row-2">
+          <div class="horizontal-marquee smooth">
+              <div class="horizontal-marquee-inner">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original-wordmark.svg" width="60px" />
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hibernate/hibernate-original-wordmark.svg" width="60px" />
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg" width="60px" />
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" width="60px" />
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original-wordmark.svg" width="60px" />
+              </div>
+          </div>
+      </div>
+
+      <div class="marquee-container row-3">
+          <div class="horizontal-marquee smooth">
+              <div class="horizontal-marquee-inner">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/junit/junit-plain-wordmark.svg" width="60px" />
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" width="60px" />
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/maven/maven-original-wordmark.svg" width="60px" />
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg" width="60px" />
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg" width="60px" />
+              </div>
+          </div>
+      </div>
+  </section>
+
+<!--Experience-->
+  <section id="Experience" class="experience-section">
+      <h1>&lt;Experience/&gt;</h1>
+  </section>
 
 
-    <!--Skills-->
-    <section class="skills-section" id="Skills">
-        <h1>&lt;Skills/&gt;</h1>
-        <p>Technologies I use to build robust applications.</p>
-        <div class="skills-grid">
-            <div class="skill-badge"><i class="fab fa-java"></i> Java</div>
-            <div class="skill-badge"><i class="fas fa-leaf"></i> Spring Framework</div>
-            <div class="skill-badge"><i class="fas fa-project-diagram"></i> Hibernate</div>
-            <div class="skill-badge"><i class="fas fa-plug"></i> REST API</div>
-            <div class="skill-badge"><i class="fas fa-database"></i> PostgreSQL</div>
-            <div class="skill-badge"><i class="fab fa-docker"></i> Docker</div>
-            <div class="skill-badge"><i class="fab fa-git-alt"></i> Git</div>
-            <div class="skill-badge"><i class="fab fa-html5"></i> HTML5</div>
-            <div class="skill-badge"><i class="fab fa-css3-alt"></i> CSS3</div>
-            <div class="skill-badge"><i class="fas fa-cloud"></i> Heroku</div>
-            <div class="skill-badge"><i class="fas fa-cubes"></i> Microservices</div>
-            <div class="skill-badge"><i class="fas fa-chart-line"></i> Grafana</div>
-            <div class="skill-badge"><i class="fas fa-sync-alt"></i> CI/CD</div>
-            <div class="skill-badge"><i class="fas fa-tools"></i> Jenkins</div>
-        </div>
-    </section>
+<!--Project-->
 
-    <!--Contact-->
-    <section id="Contact" class="contact-section" >
-        <h1>Reach out</h1>
-        <p>Questions or collaboration in mind? 
-            Drop me a message — I’m all ears!
-        </p>
-            
-        <div class="contact-container">
-            <!-- Contact Form -->
-            <form class="contact-form" action="https://formspree.io/f/xnndwgnl" method="POST">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" placeholder="Your Name" required>
-                </div>
+  <!--Contact-->
+  <section id="Contact" class="contact-section" >
+      <h1>Reach out</h1>
+      <p>Questions or collaboration in mind?
+          Drop me a message — I’m all ears!
+      </p>
 
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="you@example.com" required>
-                </div>
+      <div class="contact-container">
+          <!-- Contact Form -->
+          <form class="contact-form" action="https://formspree.io/f/xnndwgnl" method="POST">
+              <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" id="name" placeholder="Your Name" required>
+              </div>
 
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" name="subject" id="subject" placeholder="Let's build something..." required>
-                </div>
+              <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email" placeholder="you@example.com" required>
+              </div>
 
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" rows="6" placeholder="Your message here..." required></textarea>
-                </div>
+              <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" name="subject" id="subject" placeholder="Let's build something..." required>
+              </div>
 
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
-    </section>
+              <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea name="message" id="message" rows="6" placeholder="Your message here..." required></textarea>
+              </div>
 
-    <!--Footer-->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Daniel Mogoreanu — Built with 💻 & ☕</p>
-        
-        
-            <div class="social-links">
-                <a href="https://github.com/DanTheDev22" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://md.linkedin.com/in/daniel-m-dev" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </div>
-        </div>
-    </footer>
+              <button type="submit" class="btn">Send Message</button>
+          </form>
+      </div>
+  </section>
 
-    <div id="videoModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <video id="previewVideo" controls></video>
-        </div>
-    </div>
+  <!--Footer-->
+  <footer>
+      <div class="footer-content">
+          <p>&copy; 2025 Daniel Mogoreanu — Built with 💻 & ☕</p>
 
-    <script src="scripts/main.js"></script>
 
-</body>
+          <div class="social-links">
+              <a href="https://github.com/DanTheDev22" target="_blank" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+              </a>
+              <a href="https://md.linkedin.com/in/daniel-m-dev" target="_blank" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+              </a>
+          </div>
+      </div>
+  </footer>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/3.9.1/tsparticles.bundle.min.js"></script>
+  <script type="module" src="src/js/main.js"></script>
+  </body>
 </html>
