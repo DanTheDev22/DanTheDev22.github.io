@@ -24,35 +24,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         .go();
 
     new InfiniteMarquee({
-        element: '.row-1',
-        speed: 25000,
+        element: '.marquee-container',
+        speed: 20000,
         smoothEdges: true,
         pauseOnHover: true,
         direction: 'right',
-        gap: '15px',
-        duplicateCount: 2,
-        mobileSettings: {
-            direction: 'top',
-            speed: 20000
-        },
-        on: {
-            beforeInit: () => {
-                console.log('Not Yet Initialized');
-            },
-
-            afterInit: () => {
-                console.log('Initialized');
-            }
-        }
-    });
-
-    new InfiniteMarquee({
-        element: '.row-2',
-        speed: 25000,
-        smoothEdges: true,
-        pauseOnHover: true,
-        direction: 'left',
-        gap: '15px',
         duplicateCount: 1,
         mobileSettings: {
             direction: 'top',
@@ -69,28 +45,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     });
 
-    new InfiniteMarquee({
-        element: '.row-3',
-        speed: 15000,
-        smoothEdges: true,
-        pauseOnHover: true,
-        direction: 'right',
-        gap: '15px',
-        duplicateCount: 1,
-        mobileSettings: {
-            direction: 'top',
-            speed: 20000
-        },
-        on: {
-            beforeInit: () => {
-                console.log('Not Yet Initialized');
-            },
+  
 
-            afterInit: () => {
-                console.log('Initialized');
-            }
-        }
-    });
 
     // Initialize Atropos
     Atropos({
