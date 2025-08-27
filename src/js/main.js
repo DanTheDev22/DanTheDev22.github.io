@@ -1,11 +1,14 @@
 import "../css/styles.css"
 import "bootstrap/dist/css/bootstrap.css"
 import "bootstrap"
+import * as Popper from "@popperjs/core"
 import "atropos/atropos.css"
 import Atropos from "atropos";
 import TypeIt from "typeit";
 
 document.addEventListener("DOMContentLoaded", async () => {
+
+   
 
     new TypeIt("#type-effect", {
         speed: 125,
