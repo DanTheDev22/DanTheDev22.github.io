@@ -128,7 +128,7 @@ html, body {
     flex-shrink: 0;
 }
 
-.my-atropos {
+.brand-atropos, .image-atropos {
     cursor: pointer;
 }
 
@@ -317,42 +317,36 @@ html, body {
 }
 
 
+.scroll-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* vertical alignment */
+    justify-content: center; /* center horizontally */
+    gap: 0.5rem;           /* space between arrow and text */
+    font-family: monospace; /* to match your style */
+    color: #00ff88;
+    font-size: 1.1rem;
+}
 
-.scroll-arrow::before {
-  animation: bounce 1.3s ease infinite;
-  bottom: 2rem;
-  color: #fff;
-  content: '╲╱';
-  font-size: 1rem;
-  height: 3rem;
-  left: 50%;
-  letter-spacing: -1px;
-  line-height: 4rem;
-  margin-left: -3rem;
-  opacity: 1;
-  position: absolute;
-  text-align: center;
-  width: 7rem;
+.scroll-down a {
+    text-decoration: none;
+    color: inherit;           /* keep the green color */
+}
+
+.arrow {
+    font-size: 1.3rem; /* slightly bigger than text */
+    animation: bounce 1.5s infinite;
 }
 
 @keyframes bounce {
-  50% {
-    transform: translateY(-50%);
-  }
-}
-
-.scrollButton {
-  color: #00cc70 ;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.2rem;
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
 }
 
 /*!* About page *!*/
 
 .about-section {
-  padding: 60px 20px;
+  padding: 20px 0;
   background: #1c1f26;
   text-align: center;
 }
@@ -436,7 +430,7 @@ html, body {
 /*!*!*!* Skills page *!*!*!*/
 
 .skills-section {
-  padding: 60px 20px;
+  padding: 30px 70px;
   background: #1c1f26;
   text-align: center;
 }
@@ -589,7 +583,8 @@ footer {
 
 .social-links {
   display: flex;
-  gap: 0px;
+  gap: 1rem;
+    justify-content: center;
 }
 
 .social-links a {
@@ -601,6 +596,14 @@ footer {
 .social-links a:hover {
   color: #00ff88;
   transform: translateY(-3px);
+}
+
+.social-links img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0.8); /* slightly brighter */
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .infinite-marquee {

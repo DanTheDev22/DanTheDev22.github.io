@@ -30,7 +30,21 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Initialize Atropos
     Atropos({
-        el: '.my-atropos',
+        el: '.brand-atropos',
+        activeOffset: 50,
+        shadowScale: 1.0,
+        rotateXMax: 18,
+        rotateYMax: 18,
+        rotateTouch: true,
+        duration: 250,
+        easing: 'cubic-bezier(.1,.9,.3,1)',
+        shadow: false,
+        highlight: false,
+    });
+
+    // Initialize Atropos
+    Atropos({
+        el: '.image-atropos',
         activeOffset: 50,
         shadowScale: 1.0,
         rotateXMax: 18,

@@ -22,7 +22,7 @@
             <div class="container">
                 <div class="hero-section">
                     <div class="head-container">
-                        <div class="atropos my-atropos">
+                        <div class="atropos brand-atropos">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
                                     <div class="atropos-inner">
@@ -100,9 +100,9 @@
                             </div>
                         </div>
                     </div>
-                        <img src="" alt="">
-                    <div class="scroll-arrow">
-                        <a href="#About" class="scrollButton">Scroll down</a>
+                    <div class="scroll-down">
+                        <span class="arrow">∨</span>
+                        <span class="text"><a href="#About">Scroll down</a></span>
                     </div>
                 </div>
             </div>
@@ -112,27 +112,35 @@
 
   <!-- About section -->
   <section class="about-section" id="About">
-      <h1>&lt;About Me/&gt;</h1>
-      <div class="about-content">
-          <div class="about-text">
-              <p>
-                  👋 Hey there! I'm <strong>Daniel Mogoreanu</strong>  — a self-taught <strong>Java Software Engineer</strong>  with a strong passion for technology and a drive to grow into a top specialist.
-              </p>
-              <br>
-              <p>
-                  Since childhood, I’ve been fascinated by how things work, always exploring tech and solving problems on my own. That curiosity turned into a serious commitment to backend development with Java and Spring Boot.
-              </p>
-              <br>
-          </div>
+      <div class="container">
+          <h1>&lt;About Me/&gt;</h1>
+          <div class="about-content">
+              <div class="about-text">
+                  <p>
+                      👋 Hey there! I'm <strong>Daniel Mogoreanu</strong>  — a self-taught <strong>Java Software Engineer</strong>  with a strong passion for technology and a drive to grow into a top specialist.
+                  </p>
+                  <br>
+                  <p>
+                      Since childhood, I’ve been fascinated by how things work, always exploring tech and solving problems on my own. That curiosity turned into a serious commitment to backend development with Java and Spring Boot.
+                  </p>
+                  <br>
+              </div>
 
-          <div class="about-image">
-              <img src="src/assets/images/about-photo.png" alt="Daniel Mogoreanu Portrait">
+              <div class="atropos image-atropos">
+                  <div class="atropos-scale">
+                      <div class="atropos-rotate">
+                          <div class="atropos-inner">
+                                  <img src="src/assets/images/about-photo.png" alt="Daniel Mogoreanu Portrait">
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
       </div>
   </section>
 
   <!--Skills-->
-    <section class="skills-section" id="Skills">
+  <section class="skills-section" id="Skills">
       <h1>&lt;Skills/&gt;</h1>
       <p>Technologies I use to build robust applications.</p>
 
@@ -347,11 +355,37 @@
                 </div>
             </div>
         </div>
+
+      <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#fullStack" aria-expanded="false" aria-controls="fullStack">
+          See Full Stack ↓
+      </button>
+
+      <div class="collapse mt-3" id="fullStack">
+          <div class="row">
+              <div class="col-md-4 mb-3">
+                  <h5>Backend</h5>
+                  <img src="..." alt="Java" class="img-fluid">
+                  <img src="..." alt="Spring" class="img-fluid">
+                  <img src="..." alt="Hibernate" class="img-fluid">
+              </div>
+              <div class="col-md-4 mb-3">
+                  <h5>Frontend</h5>
+                  <img src="..." alt="HTML" class="img-fluid">
+                  <img src="..." alt="CSS" class="img-fluid">
+                  <img src="..." alt="JS" class="img-fluid">
+                  <img src="..." alt="Bootstrap" class="img-fluid">
+              </div>
+              <!-- alte categorii -->
+          </div>
+      </div>
+
+
     </section>
 
 <!--Experience-->
   <section id="Experience" class="experience-section">
-      <h1>&lt;Experience/&gt;</h1>
+      <div class="container"><h1>&lt;Experience/&gt;</h1>
+      </div>
   </section>
 
 
