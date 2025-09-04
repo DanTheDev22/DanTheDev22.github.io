@@ -462,6 +462,19 @@ html, body {
   line-height: 1.6;
 }
 
+/* Experience page*/
+
+.experience-section {
+    padding: 20px 0;
+    background: #1c1f26;
+    text-align: center;
+}
+
+.experience-section h1 {
+    color: #00ff88;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
 
 
 /*!* Contact page *!*/
