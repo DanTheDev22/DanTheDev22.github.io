@@ -462,10 +462,9 @@ html, body {
   line-height: 1.6;
 }
 
-/* Experience page*/
-
+/*Experience section*/
 .experience-section {
-    padding: 20px 0;
+    padding: 50px 0;
     background: #1c1f26;
     text-align: center;
 }
@@ -474,6 +473,219 @@ html, body {
     color: #00ff88;
     margin-bottom: 40px;
     font-size: 2rem;
+}
+
+.experience-wrapper {
+    display: flex;
+    justify-content: flex-start; /* cel mai recent în stânga */
+    gap: 20px;
+    flex-wrap: wrap; /* pe mobil se sparge pe rânduri */
+}
+
+.exp-card {
+    background: #2a2f38;;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.exp-card:hover {
+    transform: translateY(-5px);
+    border-color: #00ff88;
+}
+
+.exp-title {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.exp-company {
+    color: #bbbbbb;
+    font-size: 1rem;
+}
+
+.exp-period {
+    display: block;
+    margin: 10px 0 15px;
+    color: #888;
+    font-style: italic;
+}
+
+.accordion-button {
+    background-color: #2a2f38 !important; /* aceeași ca exp-card */
+    border: 1px solid #333 !important;
+    color: #e0e0e0 !important;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    background: #262b33 !important; /* puțin mai închis */
+    color: #00ff88 !important;
+    box-shadow: none !important;
+}
+
+.accordion-button:hover {
+    background: #333b45 !important; /* highlight subtil */
+    color: #00ff88 !important;
+}
+
+.accordion-body {
+    background: #1c1f26; /* rămâne mai închis ca să diferențieze */
+    color: #ddd;
+    text-align: left;
+}
+
+.accordion-body ul {
+    padding-left: 20px;
+}
+
+.accordion-body li {
+    margin-bottom: 8px;
+}
+
+
+/*Projects page*/
+
+/* Projects Section */
+.projects-section {
+    padding: 80px 20px;
+    background-color: #1c1f26;
+    text-align: center;
+}
+
+.projects-section h1 {
+    color: #00ff88;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.projects-section p {
+    color: #bbb;
+    max-width: 720px;
+    margin: 0 auto 50px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* Wrapper pentru cele 2 carduri */
+.projects-wrapper {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap; /* pe mobil se sparge */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Carduri */
+.project-card {
+    flex: 1;
+    min-width: 320px;
+    background: #2a2f38;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #00ff88;
+}
+
+/* Swiper preview (stânga) */
+.project-preview {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project-preview img,
+.project-preview video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Swiper info (dreapta) */
+.project-info {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+}
+
+.project-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.project-info p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Swiper arrows + pagination */
+
+.swiper {
+    width: 600px;
+    height: 300px;
+}
+
+.project-preview .swiper-button-next,
+.project-preview .swiper-button-prev {
+    display: none !important;
+}
+
+.project-info .swiper-button-next,
+.project-info .swiper-button-prev {
+    color: #00ff88;
+    top: 90%;   /* împingi mai jos */
+    transform: scale(0.8);
+}
+
+.swiper-pagination-bullet {
+    background: #666 !important;
+    opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+    background: #00ff88 !important;
+    opacity: 1;
+}
+
+.project-preview .swiper-pagination {
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+.project-info .swiper-pagination {
+    display: none !important;
+}
+
+.project-preview img,
+.project-preview video,
+.inner-preview img,
+.inner-preview video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* schimbă din cover -> contain */
+    background: #111; /* să nu rămână spațiu gol negru */
+    border-radius: 8px;
 }
 
 

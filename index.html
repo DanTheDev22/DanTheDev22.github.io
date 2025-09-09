@@ -376,28 +376,104 @@
       <div class="container">
           <h1>&lt;Experience/&gt;</h1>
 
-          <div class="exp-item">
-              <h3>Freelancer</h3>
-              <h5>Upwork</h5>
-              <span class="timeline">2025 – Present</span>
-              <div class="accordion accordion-flush" id="accordionFlushExample">
-                  <div class="accordion-item">
-                      <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                              See info!
-                          </button>
-                      </h2>
-                      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item’s accordion body.</div>
+          <div class="experience-wrapper">
+
+              <!-- Card 1 -->
+              <div class="exp-card">
+                  <h3 class="exp-title">Freelancer</h3>
+                  <h5 class="exp-company">Upwork</h5>
+                  <span class="exp-period">August 2025 – Present</span>
+
+                  <div class="accordion accordion-flush" id="accordionExp1">
+                      <div class="accordion-item">
+                          <h2 class="accordion-header">
+                              <button class="accordion-button collapsed"
+                                      type="button"
+                                      data-bs-toggle="collapse"
+                                      data-bs-target="#exp1"
+                                      aria-expanded="false"
+                                      aria-controls="exp1">
+                                  Responsibilities & Achievements
+                              </button>
+                          </h2>
+                          <div id="exp1" class="accordion-collapse collapse" data-bs-parent="#accordionExp1">
+                              <div class="accordion-body">
+                                  <ul>
+                                      <li>Developed and deployed backend services with Java & Spring Boot</li>
+                                      <li>Integrated REST APIs and optimized database queries</li>
+                                      <li>Maintained client satisfaction with timely delivery</li>
+                                  </ul>
+                              </div>
+                          </div>
                       </div>
                   </div>
               </div>
+
+              <!-- Card 2 -->
+              <div class="exp-card">
+                  <h3 class="exp-title">To be continued</h3>
+              </div>
+
           </div>
       </div>
   </section>
 
 
 <!--Project-->
+  <section class="projects-section" id="Projects">
+     <div class="container">
+         <h1>&lt;Projects/&gt;</h1>
+
+         <div class="container my-5">
+             <div class="row">
+                 <div class="col-md-6">
+                     <div class="project-preview swiper">
+                         <div class="swiper-wrapper">
+                             <div class="swiper-slide">
+                                 <div class="inner-preview swiper">
+                                     <div class="swiper-wrapper">
+                                         <div class="swiper-slide"><img src="src/assets/images/1.jpg" class="img-fluid"></div>
+                                         <div class="swiper-slide"><img src="src/assets/images/2.jpg" class="img-fluid"></div>
+                                         <div class="swiper-slide"><video src="src/assets/videos/tradebot-demo.mp4" controls></video></div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="swiper-slide">
+                                 <div class="inner-preview swiper">
+                                     <div class="swiper-wrapper">
+                                         <div class="swiper-slide"><img src="src/assets/images/3.jpg" class="img-fluid"></div>
+                                         <div class="swiper-slide"><img src="src/assets/images/4.jpg" class="img-fluid"></div>
+                                     </div>
+                                 </div>
+                             </div>
+
+                             <div class="swiper-pagination"></div>
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-md-6">
+                     <div class="project-info swiper">
+                         <div class="swiper-wrapper">
+                             <div class="swiper-slide">
+                                 <h3>Proiect 1</h3>
+                                 <p>Descriere proiect 1...
+                                 lorem lorem lorem lorem</p>
+                             </div>
+                             <div class="swiper-slide">
+                                 <h3>Proiect 2</h3>
+                                 <p>Descriere proiect 2...
+                                 asblasbdalbasdbasdbsa</p>
+                             </div>
+                         </div>
+                         <div class="swiper-button-next"></div>
+                         <div class="swiper-button-prev"></div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+  </section>
 
   <!--Contact-->
   <section id="Contact" class="contact-section" >

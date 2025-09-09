@@ -1,13 +1,59 @@
 import "../css/styles.css"
 import "bootstrap/dist/css/bootstrap.css"
 import "bootstrap"
-import * as Popper from "@popperjs/core"
 import "atropos/atropos.css"
 import Atropos from "atropos";
 import TypeIt from "typeit";
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+// import Swiper and modules styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+
 
 document.addEventListener("DOMContentLoaded", async () => {
 
+    Swiper.use([Navigation, Pagination]);
+
+    const previewSwiper = new Swiper(".project-preview", {
+        loop: false,
+        pagination: { el: ".swiper-pagination", clickable: true },
+        allowTouchMove: false
+    });
+
+    const infoSwiper = new Swiper(".project-info", {
+        loop: false,
+        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        on: {
+            slideChange: function () {
+                previewSwiper.slideTo(this.activeIndex);
+
+                // Oprește autoplay pe toate inner-swipers
+                innerSwipers.forEach(sw => sw.autoplay.stop());
+
+                if (innerSwipers[this.activeIndex]) {
+                    innerSwipers[this.activeIndex].autoplay.start();
+                }
+            }
+        }
+    });
+
+    const innerSwipers = [];
+    document.querySelectorAll(".inner-preview").forEach((el) => {
+        innerSwipers.push(new Swiper(el, {
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false
+            },
+        }));
+    });
+
+    if (innerSwipers[0]) {
+        innerSwipers[0].autoplay.start();
+    }
    
 
     new TypeIt("#type-effect", {
@@ -42,7 +88,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         highlight: false,
     });
 
-    // Initialize Atropos
     Atropos({
         el: '.image-atropos',
         activeOffset: 50,
@@ -56,7 +101,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         highlight: false,
     });
 
-    // Brand click animation
     const brand = document.querySelector(".my-atropos");
     if (brand) {
         brand.addEventListener("click", () => {
@@ -134,56 +178,30 @@ particlesJS('particles-js', {
         }
     },
     retina_detect: true
+})
+
+document.querySelector('.contact-form').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    const action = form.action;
+
+    try {
+        const response = await fetch(action, {
+            method: 'POST',
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            alert("✅ Message sent successfully!");
+            form.reset();
+        } else {
+            alert("❌ Something went wrong. Please try again.");
+        }
+    } catch (error) {
+        alert("⚠️ Network error. Please check your connection.");
+    }
 });
-// document.querySelector('.contact-form').addEventListener('submit', async function (e) {
-//     e.preventDefault();
-//     const form = e.target;
-//     const data = new FormData(form);
-//     const action = form.action;
-//
-//     try {
-//       const response = await fetch(action, {
-//         method: 'POST',
-//         body: data,
-//         headers: {
-//           'Accept': 'application/json'
-//         }
-//       });
-//
-//       if (response.ok) {
-//         alert("✅ Message sent successfully!");
-//         form.reset();
-//       } else {
-//         alert("❌ Something went wrong. Please try again.");
-//       }
-//     } catch (error) {
-//       alert("⚠️ Network error. Please check your connection.");
-//     }
-//   });
-//
-//
-//
-//   const modal = document.getElementById('videoModal');
-//   const video = document.getElementById('previewVideo');
-//   const closeBtn = document.querySelector('.close-btn');
-//
-//   document.querySelectorAll('.btn-preview').forEach(button => {
-//     button.addEventListener('click', () => {
-//         video.src = button.getAttribute('data-video');
-//       modal.style.display = 'block';
-//     });
-//   });
-//
-//   closeBtn.onclick = () => {
-//     modal.style.display = 'none';
-//     video.pause();
-//     video.currentTime = 0;
-//   };
-//
-//   window.onclick = e => {
-//     if (e.target === modal) {
-//       modal.style.display = 'none';
-//       video.pause();
-//       video.currentTime = 0;
-//     }
-//   };
