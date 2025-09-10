@@ -12,6 +12,7 @@ html {
 body {
   color: #e0e0e0;
   background: radial-gradient(circle at 20% 30%, #1b262c, #1c1f26 70%);
+
 }
 
 html, body {
@@ -86,10 +87,24 @@ html, body {
     justify-content: space-between;
     align-items: center;
   list-style-type: none;
-  padding: 0;
-    margin: 0;
-    width: 500px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    gap: 15px;
+    z-index: 1000;
+    width: fit-content; /* doar cât are nevoie */
+    margin-left: auto;  /* dacă vrei să stea în dreapta */
+    margin-right: auto; /* dacă vrei să stea centrat */
+    position: sticky;
+    top: 20px;   /* distanța de sus */
+    transition: all 0.3s ease;
 }
+
+.scrolled .navbar-links {
+    padding: 5px 15px;
+    background: rgba(28, 31, 38, 0.95);
+}
+
 
 .navbar a {
   padding: 10px;
@@ -622,21 +637,37 @@ html, body {
 /* Swiper info (dreapta) */
 .project-info {
     width: 100%;
-    padding: 10px;
+    padding: 30px 25px; /* padding mai generos */
+    background: rgba(42, 47, 56, 0.95);
+    border-radius: 12px;
+    border: 1px solid #333;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    min-height: 280px;
+}
+
+
+.project-info:hover {
+    transform: translateY(-5px);
+    border-color: #00ff88;
 }
 
 .project-info h3 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #00ff88; /* evidențiere verde ca la brand */
 }
 
+/* Text */
 .project-info p {
     font-size: 1rem;
-    color: #ccc;
+    color: #bbbbbb;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: auto;
 }
 
 /* Swiper arrows + pagination */
@@ -653,9 +684,18 @@ html, body {
 
 .project-info .swiper-button-next,
 .project-info .swiper-button-prev {
-    color: #00ff88;
-    top: 90%;   /* împingi mai jos */
+    color: #00ff88 !important;
+    top: auto;
+    bottom: 15px;
     transform: scale(0.8);
+}
+
+.project-info .swiper-button-prev {
+    left: 15px;
+}
+
+.project-info .swiper-button-next {
+    right: 15px;
 }
 
 .swiper-pagination-bullet {
@@ -688,6 +728,21 @@ html, body {
     border-radius: 8px;
 }
 
+.project-info .btn-cta {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #00ff88;
+    color: #1c1f26;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
+    margin-top: auto;
+}
+
+.project-info .btn-cta:hover {
+    background: #00cc6a;
+}
 
 /*!* Contact page *!*/
 

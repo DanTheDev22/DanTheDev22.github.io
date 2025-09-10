@@ -6,11 +6,14 @@ import Atropos from "atropos";
 import TypeIt from "typeit";
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
-// import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+
+window.addEventListener("scroll", () => {
+    document.body.classList.toggle("scrolled", window.scrollY > 50);
+});
 
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -18,13 +21,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     Swiper.use([Navigation, Pagination]);
 
     const previewSwiper = new Swiper(".project-preview", {
-        loop: false,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
         pagination: { el: ".swiper-pagination", clickable: true },
         allowTouchMove: false
     });
 
     const infoSwiper = new Swiper(".project-info", {
-        loop: false,
+        cssMode: true,
         navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
         on: {
             slideChange: function () {
@@ -37,17 +45,23 @@ document.addEventListener("DOMContentLoaded", async () => {
                     innerSwipers[this.activeIndex].autoplay.start();
                 }
             }
-        }
+        },
+        mousewheel: true,
+        keyboard: true
     });
 
     const innerSwipers = [];
-    document.querySelectorAll(".inner-preview").forEach((el) => {
+    document.querySelectorAll(".inner-preview").forEach((el, index) => {
         innerSwipers.push(new Swiper(el, {
             loop: true,
             autoplay: {
                 delay: 4000,
                 disableOnInteraction: false
             },
+            pagination: {
+                el: el.querySelector(".swiper-pagination"),
+                clickable: true
+            }
         }));
     });
 
