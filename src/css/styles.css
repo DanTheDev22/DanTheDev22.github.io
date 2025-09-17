@@ -88,6 +88,7 @@ html, body {
     align-items: center;
   list-style-type: none;
     padding: 10px 20px;
+    margin: 0;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     gap: 15px;
@@ -351,6 +352,7 @@ html, body {
 .arrow {
     font-size: 1.3rem; /* slightly bigger than text */
     animation: bounce 1.5s infinite;
+    cursor:pointer;
 }
 
 @keyframes bounce {
@@ -374,17 +376,19 @@ html, body {
 
 .about-content {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   gap: 50px;
   align-items: center;
-  max-width: 1000px;
-  margin: auto;
+  margin: 0;
   text-align: left;
 }
 
+.image-atropos {
+  align-self: flex-end;
+}
+
 .about-text {
-  flex: 1;
+  align-self: start;
   min-width: 280px;
   max-width: 600px;
   color: #bbbbbb;
@@ -398,8 +402,8 @@ html, body {
 
 .about-image {
   flex: 1;
-  min-width: 200px;
-  max-width: 300px;
+  min-width: 300px;
+  max-width: 400px;
   text-align: center;
 }
 
@@ -416,31 +420,6 @@ html, body {
   color: #bbbbbb;
   line-height: 1.6;
 }
-
-
-
-/*!*!*!* Projects page *!*!*!*/
-
-/*!*!*.projects-section {*!*!*/
-/*!*!*  padding: 80px 20px;*!*!*/
-/*!*!*  background-color: #1c1f26;*!*!*/
-/*!*!*  text-align: center;*!*!*/
-/*!*!*}*!*!*/
-
-/*!*!*.projects-section h1 {*!*!*/
-/*!*!*  color: #00ff88;*!*!*/
-/*!*!*  font-size: 2.2rem;*!*!*/
-/*!*!*  margin-bottom: 15px;*!*!*/
-/*!*!*}*!*!*/
-
-/*!*!*.projects-section p {*!*!*/
-/*!*!*  color: #bbb;*!*!*/
-/*!*!*  max-width: 720px;*!*!*/
-/*!*!*  margin: 0 auto 50px;*!*!*/
-/*!*!*  font-size: 1.05rem;*!*!*/
-/*!*!*  line-height: 1.7;*!*!*/
-/*!*!*}*!*!*/
-
 
 /*!*!*!* Skills page *!*!*!*/
 
@@ -479,7 +458,7 @@ html, body {
 
 /*Experience section*/
 .experience-section {
-    padding: 50px 0;
+    padding: 20px 0;
     background: #1c1f26;
     text-align: center;
 }
@@ -569,7 +548,7 @@ html, body {
 
 /* Projects Section */
 .projects-section {
-    padding: 80px 20px;
+  padding: 30px 0;
     background-color: #1c1f26;
     text-align: center;
 }
@@ -747,7 +726,7 @@ html, body {
 /*!* Contact page *!*/
 
 .contact-section {
-  padding: 60px 20px;
+  padding: 50px 0;
   background: #1c1f26;
   text-align: center;
 }
@@ -855,7 +834,7 @@ html, body {
 footer {
   background: radial-gradient(circle at top center, #1b262c, #0f1117);
   border-top: 1px solid #00ff88;
-  padding: 30px 20px;
+  padding: 20px 0;
   text-align: center;
   color: #ccc;
   font-size: 0.85rem;

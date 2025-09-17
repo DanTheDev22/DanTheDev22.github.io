@@ -9,7 +9,10 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
+AOS.init();
 
 window.addEventListener("scroll", () => {
     document.body.classList.toggle("scrolled", window.scrollY > 50);
@@ -64,10 +67,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
         }));
     });
-
-    if (innerSwipers[0]) {
-        innerSwipers[0].autoplay.start();
-    }
    
 
     new TypeIt("#type-effect", {

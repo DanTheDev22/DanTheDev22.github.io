@@ -112,31 +112,39 @@
 
   <!-- About section -->
   <section class="about-section" id="About">
-      <div class="container">
-          <h1>&lt;About Me/&gt;</h1>
-          <div class="about-content">
-              <div class="about-text">
-                  <p>
-                      👋 Hey there! I'm <strong>Daniel Mogoreanu</strong>  — a self-taught <strong>Java Software Engineer</strong>  with a strong passion for technology and a drive to grow into a top specialist.
-                  </p>
-                  <br>
-                  <p>
+        <div class="container">
+            <h1>&lt;About Me/&gt;</h1>
+            <div class="about-content">
+                <p class="about-text">
+                    👋 Hey there! I'm <strong>Daniel Mogoreanu</strong>  — a self-taught <strong>Java Software Engineer</strong>  with a strong passion for technology and a drive to grow into a top specialist.
+                </p>
+                  
+                  <div class="atropos image-atropos">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner">
+                                        <img src="src/assets/images/about-photo.png" alt="Daniel Mogoreanu Portrait">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                  <p  class="about-text">
                       Since childhood, I’ve been fascinated by how things work, always exploring tech and solving problems on my own. That curiosity turned into a serious commitment to backend development with Java and Spring Boot.
                   </p>
-                  <br>
-              </div>
 
-              <div class="atropos image-atropos">
-                  <div class="atropos-scale">
-                      <div class="atropos-rotate">
-                          <div class="atropos-inner">
-                                  <img src="src/assets/images/about-photo.png" alt="Daniel Mogoreanu Portrait">
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
+                <h3 class="about-text">What I can do:</h3>
+                <ul class="about-text">
+                    <li>Develop robust and scalable RESTful APIs </li>
+                    <li>Debug and troubleshoot backend issues efficiently</li>
+                    <li>Integrate third-party services and APIs</li>
+                    <li>Write clean, maintainable, and testable code</li>
+                    <li>Deploy and maintain Java-based applications</li>
+                </ul>
+
+
+            </div>
+        </div>
   </section>
 
   <!--Skills-->
@@ -257,6 +265,10 @@
                     <div class="tech-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="PostgreSQL">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain-wordmark.svg" width="60px" />
                     </div>
+
+                    <div class="tech-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Redis">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" width="60px" />
+                    </div>
                 
                     <div class="tech-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Docker">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" width="60px" />
@@ -295,6 +307,10 @@
                     <div class="tech-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="PostgreSQL">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain-wordmark.svg" width="60px" />
                     </div>
+
+                    <div class="tech-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Redis">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" width="60px" />
+                    </div>
                 
                     <div class="tech-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Docker">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" width="60px" />
@@ -332,6 +348,10 @@
                     <!-- Third List -->
                     <div class="tech-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="PostgreSQL">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain-wordmark.svg" width="60px" />
+                    </div>
+
+                    <div class="tech-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Redis">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" width="60px" />
                     </div>
                 
                     <div class="tech-item" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Docker">
@@ -399,9 +419,9 @@
                           <div id="exp1" class="accordion-collapse collapse" data-bs-parent="#accordionExp1">
                               <div class="accordion-body">
                                   <ul>
-                                      <li>Developed and deployed backend services with Java & Spring Boot</li>
+                                      <!-- <li>Developed and deployed backend services with Java & Spring Boot</li>
                                       <li>Integrated REST APIs and optimized database queries</li>
-                                      <li>Maintained client satisfaction with timely delivery</li>
+                                      <li>Maintained client satisfaction with timely delivery</li> -->
                                   </ul>
                               </div>
                           </div>
@@ -459,14 +479,40 @@
                       <div class="project-info swiper">
                           <div class="swiper-wrapper">
                               <div class="swiper-slide">
-                                  <h3>Proiect 1</h3>
-                                  <p>Descriere proiect 1... lorem lorem lorem lorem</p>
+                                  <h3>TradeBot </h3>
+                                  <p>A Telegram Bot designed to provide real-time financial data and personalized tools for traders and investors.</p>
+                                  <p>Technologies used:
+                                    <ul>
+                                        <li>Java 17</li>
+                                        <li>Spring Boot</li>
+                                        <li>Telegram Bot Api</li>
+                                        <li>PostgreSQL</li>
+                                        <li>Redis</li>
+                                        <li>Docker</li>
+                                    </ul>
+                                  </p>
                                   <a href="#" class="btn-cta">View Project</a>
+                                  <a href="#" class="btn-cta">View Repository</a>
                               </div>
                               <div class="swiper-slide">
-                                  <h3>Proiect 2</h3>
-                                  <p>Descriere proiect 2... asblasbdalbasdbasdbsa</p>
+                                  <h3>Sigment - web chat</h3>
+                                  <p>A modular monolith chat application designed with a strong focus on confidentiality and security.</p>
+                                  <p>Project Goal:
+                                     To build a highly secure chat platform where users are assured that no third party—including hosting providers, governments, 
+                                     or admins—can access their IP addresses or message content. The app uses advanced protocols inspired by Thor Proxy and 
+                                     libsignal-protocol concepts to guarantee privacy.
+                                    </p>
+                                    <p>Technologies used:
+                                        <ul>
+                                            <li>Spring Boot</li>
+                                            <li>React</li>
+                                            
+                                        </ul>
+                                    </p>
+
+
                                   <a href="#" class="btn-cta">View Project</a>
+                                  <a href="#" class="btn-cta">View Repository</a>
                               </div>
                           </div>
                           <div class="swiper-button-next"></div>

@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.0.0",
+    "aos": "^2.3.4",
     "atropos": "^2.0.2",
     "bootstrap": "^5.3.7",
     "swiper": "^11.2.10",
