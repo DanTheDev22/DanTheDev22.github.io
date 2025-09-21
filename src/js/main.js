@@ -11,8 +11,15 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import AOS from 'aos';
 import 'aos/dist/aos.css'
+import mediumZoom from 'medium-zoom'
 
 AOS.init();
+
+mediumZoom('[data-zoomable]', {
+    margin: 24,
+    background: '#1c1f26',
+    scrollOffset: 0,
+})
 
 window.addEventListener("scroll", () => {
     document.body.classList.toggle("scrolled", window.scrollY > 50);
