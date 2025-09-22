@@ -421,6 +421,16 @@ html, body {
   line-height: 1.6;
 }
 
+.header-list {
+  align-self:center;
+  text-align: center;
+  border: 2px solid #00ff88;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+}
+
+.about-text .list {
+}
+
 /*!*!*!* Skills page *!*!*!*/
 
 .skills-section {
@@ -660,6 +670,8 @@ html, body {
     position: relative;
     overflow: hidden;  /* crop zoomed area */
 }
+
+.swiper-slide 
 
 .swiper-slide img {
     width: 100%;
