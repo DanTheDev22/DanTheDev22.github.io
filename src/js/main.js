@@ -12,6 +12,13 @@ import 'swiper/css/pagination';
 import AOS from 'aos';
 import 'aos/dist/aos.css'
 import mediumZoom from 'medium-zoom'
+import 'overlayscrollbars/overlayscrollbars.css';
+import {
+    OverlayScrollbars,
+    ScrollbarsHidingPlugin,
+    SizeObserverPlugin,
+    ClickScrollPlugin
+} from 'overlayscrollbars';
 
 AOS.init();
 
@@ -91,7 +98,27 @@ document.addEventListener("DOMContentLoaded", async () => {
         .pause(2500)
         .go();
 
-  
+    OverlayScrollbars.plugin([
+        ScrollbarsHidingPlugin,
+        SizeObserverPlugin,
+        ClickScrollPlugin
+    ]);
+
+    const pluginOptions = {
+        autoUpdate: true,
+        autoUpdateInterval: 33,
+        updateOnLoad: ['img'],
+        scrollbars: {
+            autoHide: 'always',
+            autoHideDelay: 800,
+            clickScrolling: true
+        }
+    };
+
+    const osInstance = OverlayScrollbars(document.body);
+    if (!osInstance) {
+        OverlayScrollbars(document.body, pluginOptions);
+    }
 
 
     // Initialize Atropos
