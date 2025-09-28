@@ -253,8 +253,6 @@ html, body {
 .hero-section__text h2 {
     font-size: clamp(1.3rem, 4.5vw, 1.8rem);
     color: #00ff88;
-    margin-bottom: 1rem;
-    min-height: 2.4em;
     white-space: nowrap;
     min-width: 22ch;
     display: inline-block;
@@ -380,6 +378,11 @@ html, body {
         text-align: center;
     }
 
+    .hero-section__text {
+        align-items: center;
+        text-align: center;
+    }
+
     .hero-section__text h1{
         font-size: 1.7rem;
     }
@@ -390,7 +393,8 @@ html, body {
 
     .hero-buttons {
         flex-direction: column;
-        gap: 10px;
+        justify-content: center;
+        gap: 1.2rem;
         width: 100%;
         max-width: 200px;
     }
@@ -403,6 +407,7 @@ html, body {
         display: flex;
         justify-content: center;
         gap: 1rem;
+        margin-top: 1rem;
     }
 
     .social-links img, .social-links svg {
@@ -413,7 +418,6 @@ html, body {
     .scroll-down {
         font-size: 1.1rem;
     }
-
 }
 
 /* About section */
@@ -432,7 +436,7 @@ html, body {
 .about-content {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 30px;
     align-items: center;
     margin: 0;
     text-align: left;
@@ -445,10 +449,11 @@ html, body {
 .about-text {
     align-self: start;
     min-width: 280px;
-    max-width: 600px;
+    max-width: 700px;
     color: #bbbbbb;
     font-size: 1rem;
     line-height: 1.7;
+    text-align: justify;
 }
 
 .about-text strong {
@@ -466,7 +471,7 @@ html, body {
     }
 
     .about-text {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         text-align: center;
     }
 
@@ -617,15 +622,39 @@ html, body {
 } 
 
 @media (max-width: 768px) {
+    .skills-section {
+        padding: 20px 30px;
+    }
+
     .skills-section h1 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     .skills-section p {
         font-size: 0.8rem;
+        margin-bottom: 25px;
         text-align: center;
     }
+
+    .listSkills {
+        gap: 1.5rem;
+    }
+
+    .tech-item {
+        padding: 10px;
+        max-width: 130px;
+    }
+
+    .tech-item img {
+        width: 40px;
+    }
+
+    .infinite-marquee::before,
+    .infinite-marquee::after {
+        width: 30px;
+    }
 }
+
 
 /*Experience section*/
 
@@ -713,6 +742,43 @@ html, body {
     margin-bottom: 8px;
 }
 
+@media (max-width: 768px) {
+    .experience-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .exp-card {
+        width: 90%;
+        max-width: 350px;
+        padding: 15px;
+    }
+
+    .exp-title {
+        font-size: 1.1rem;
+    }
+
+    .exp-company {
+        font-size: 0.9rem;
+    }
+
+    .exp-period {
+        font-size: 0.85rem;
+    }
+
+    .accordion-button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    .accordion-body {
+        font-size: 0.85rem;
+    }
+
+}
+
 /*Projects section*/
 
 .projects-section {
@@ -784,32 +850,41 @@ html, body {
     list-style: none;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: center;
     padding: 0;
 }
 
 .project-info ul li {
     background: #2a2f38;
-    border: 1px solid #333;
     padding: 6px 12px;
     border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+.project-info ul li:hover {
+    transform: scale(1.2);
 }
 
 .swiper {
-    width: 600px;
-    height: 350px;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .swiper-slide {
     position: relative;
     overflow: hidden;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .swiper-slide img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .project-info .swiper-button-next,
@@ -818,6 +893,14 @@ html, body {
     top: auto;
     bottom: 15px;
     transform: scale(0.7);
+}
+
+.project-preview,
+.project-info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project-info .swiper-button-prev {
@@ -830,7 +913,9 @@ html, body {
 
 .swiper-pagination-bullet {
     background: #666 !important;
-    opacity: 0.6;
+    opacity: 0.7;
+    width: 10px;
+    height: 10px;
 }
 
 .swiper-pagination-bullet-active {
@@ -839,7 +924,9 @@ html, body {
 }
 
 .project-preview .swiper-pagination {
-    bottom: 10px;
+    bottom: 15px !important;
+    position: absolute;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -855,19 +942,89 @@ html, body {
 
 .project-info .btn-cta {
     display: inline-block;
-    padding: 12px 20px;
+    padding: 10px 18px;
     background: #00ff88;
     color: #1c1f26;
     font-weight: 600;
     border-radius: 8px;
     text-decoration: none;
-    margin-top: auto;
+    margin: 8px 5px;
+    min-width: 140px;
     text-align: center;
     transition: background 0.3s;
 }
 
 .project-info .btn-cta:hover {
     background: #00cc6a;
+}
+
+@media (max-width: 768px) {
+
+    .projects-section {
+        padding: 20px 10px;
+    }
+
+    .projects-section h1 {
+        font-size: 1.6rem;
+    }
+
+    .projects-section h3 {
+        font-size: 1.2rem;
+        margin-top: 5px;
+    }
+
+    .projects-section p {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    .swiper {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .swiper-slide img {
+        object-fit: cover;
+    }
+
+    .project-preview,
+    .inner-preview {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-preview img,
+    .project-preview video,
+    .inner-preview video {
+        max-height: 220px;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    .project-info {
+        padding: 15px;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .project-info ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .project-info .btn-cta {
+        display: inline-block;
+        width: 75%;
+        margin: 10px 0 0 0;
+    }
+
+    .project-info .swiper-button-next,
+    .project-info .swiper-button-prev {
+        bottom: 10px;
+    }
+
+
 }
 
 /*Contact section*/
@@ -957,4 +1114,6 @@ footer {
 
 .medium-zoom-image {
     z-index: 9999 !important;
+    width: 650px !important;
+    height: 350px !important;
 }
