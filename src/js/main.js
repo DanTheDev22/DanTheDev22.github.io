@@ -55,7 +55,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             slideChange: function () {
                 previewSwiper.slideTo(this.activeIndex);
 
-                // Oprește autoplay pe toate inner-swipers
                 innerSwipers.forEach(sw => sw.autoplay.stop());
 
                 if (innerSwipers[this.activeIndex]) {
@@ -252,3 +251,4 @@ document.querySelector('.contact-form').addEventListener('submit', async functio
         alert("⚠️ Network error. Please check your connection.");
     }
 });
+
