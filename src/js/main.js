@@ -19,7 +19,11 @@ import {
     SizeObserverPlugin,
     ClickScrollPlugin
 } from 'overlayscrollbars';
-
+import { inject } from '@vercel/analytics';
+import { injectSpeedInsights } from '@vercel/speed-insights';
+ 
+injectSpeedInsights();
+inject();
 AOS.init();
 
 mediumZoom('[data-zoomable]', {
