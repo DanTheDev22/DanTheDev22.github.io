@@ -61,8 +61,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                 innerSwipers.forEach(sw => sw.autoplay.stop());
 
-                if (innerSwipers[this.activeIndex]) {
-                    innerSwipers[this.activeIndex].autoplay.start();
+                pauseAllVideos();
+                const currentInnerSwiper = innerSwipers[this.activeIndex];
+                if (currentInnerSwiper) {
+                    currentInnerSwiper.autoplay.start();
+                    playActiveVideo(currentInnerSwiper);
                 }
             }
         },
@@ -255,5 +258,30 @@ document.querySelector('.contact-form').addEventListener('submit', async functio
         alert("⚠️ Network error. Please check your connection.");
     }
 });
+
+function pauseAllVideos() {
+  document.querySelectorAll(".inner-preview video").forEach(video => {
+    video.pause();
+    video.removeAttribute("src");
+    video.load(); 
+  });
+}
+
+function playActiveVideo(swiperInstance) {
+  const activeSlide = swiperInstance.slides[swiperInstance.activeIndex];
+  if (!activeSlide) return;
+
+  const video = activeSlide.querySelector("video");
+  if (video && !video.src) {
+    const src = video.dataset.src;
+    if (src) {
+      video.src = src;
+      video.load();
+      video.play().catch(() => {});
+    }
+  } else if (video) {
+    video.play().catch(() => {});
+  }
+}
 
 
