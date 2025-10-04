@@ -9,7 +9,9 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^4.2.1"
+    "rollup-plugin-visualizer": "^6.0.4",
+    "vite": "^4.2.1",
+    "vite-plugin-imagemin": "^0.6.1"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.0.0",
