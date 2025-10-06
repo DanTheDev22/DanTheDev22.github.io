@@ -3,9 +3,9 @@ import "atropos/css/min";
 document.addEventListener("DOMContentLoaded", async () => {
 
     const brandEl = document.querySelector('.brand-atropos');
-    const imageEl = document.querySelector('.image-atropos');
+    // const imageEl = document.querySelector('.image-atropos');
 
-    if (brandEl || imageEl) {
+    if (brandEl) {
         import('atropos').then(({ default: Atropos }) => {
             function initAtropos(selector) {
                 Atropos({
@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 });
             }
             if (brandEl) initAtropos('.brand-atropos');
-            if (imageEl) initAtropos('.image-atropos');
         });
     }
 });

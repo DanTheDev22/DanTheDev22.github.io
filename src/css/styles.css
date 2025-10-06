@@ -1,3 +1,36 @@
+/* JetBrains Mono Regular (400) */
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrains/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* JetBrains Mono Medium (500) */
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrains/JetBrainsMono-SemiBold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* JetBrains Mono SemiBold (600) */
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrains/JetBrainsMono-Medium.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* JetBrains Mono Bold (700) */
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrains/JetBrainsMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
 html {
     scroll-behavior:smooth;
 }
